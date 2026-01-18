@@ -37,6 +37,8 @@ class Document(Base):
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="MCP Document Server")
+
+
 def get_db() -> Generator[Session, None, None]:
     db = SessionLocal()
     try:
